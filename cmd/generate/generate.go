@@ -53,6 +53,7 @@ func prependCopyrightNotice(w io.Writer, contents []byte) error {
 
 func prependCustomCodeGenerationMessage(w io.Writer) error {
 	currentTime := time.Now()
+	//nolint:goconst // These strings are emitted as explanatory comments in generated files.
 	msg := []string{
 		"",
 		"",
